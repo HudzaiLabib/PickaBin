@@ -35,7 +35,7 @@ class _ProfileWargaPageState extends State<ProfileWargaPage> {
     DatabaseReference data = FirebaseDatabase.instance.ref("warga/$key");
                                             
     XFile? selectImage = await ImagePicker().pickImage(
-      source: ImageSource.camera,
+      source: ImageSource.camera, 
       maxHeight: 512,
       maxWidth: 512,
       imageQuality: 90,

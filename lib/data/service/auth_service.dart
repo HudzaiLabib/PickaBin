@@ -4,7 +4,6 @@ import 'package:boilerplate/ui/navbar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 
@@ -102,8 +101,14 @@ class AuthService {
     }
   }
 
-  Future<String> registerWarga(String namaInstansi,String penanggungJawab,String email,String password,
-      String alamat,String telp,String jarakPengambilan) async {
+  Future<String> registerWarga(
+      String namaInstansi,
+      String penanggungJawab,
+      String email,
+      String password,
+      String alamat,
+      String telp,
+      String jarakPengambilan) async {
     try {
       //cek jika ada duplikat email
 
@@ -155,7 +160,7 @@ class AuthService {
         );
         return "Email already in use";
         // return 'The account already exists for that email.';
-      }else{
+      } else {
         Fluttertoast.showToast(
           msg: "Server Error",
           toastLength: Toast.LENGTH_SHORT,
@@ -173,9 +178,6 @@ class AuthService {
   Future<String> registerPetugas(String namaLengkap, String alamat,
       String email, String password, String telp) async {
     try {
-      
-                                        
-
       await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       await _auth.currentUser?.updateDisplayName(namaLengkap);
@@ -196,7 +198,7 @@ class AuthService {
         textColor: Colors.white,
         fontSize: 16.0,
       );
-  
+
       return "Registration Successfully";
       //Register Successful Notification
 
@@ -213,7 +215,7 @@ class AuthService {
         );
         return "Email already in use";
         // return 'The account already exists for that email.';
-      }else{
+      } else {
         Fluttertoast.showToast(
           msg: "Server Error",
           toastLength: Toast.LENGTH_SHORT,
@@ -240,16 +242,6 @@ class AuthService {
       return e.toString();
     }
   }
-
-  //Update Profile email
-  // Future updateEmail(String email) async {
-  //   try {
-  //     await _auth.currentUser?.updateEmail(email);
-  //     Fluttertoast.showToast(msg: "Update Profile Successfully",toastLength: Toast.LENGTH_SHORT);
-  //   } catch (e) {
-  //     return e.toString();
-  //   }
-  // }
 
   //Update Profile displayName
   Future updateDisplayName(String nama) async {

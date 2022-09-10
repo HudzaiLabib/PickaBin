@@ -8,6 +8,7 @@ import 'package:boilerplate/ui/home/home_petugas.dart';
 import 'package:boilerplate/ui/home/home_warga.dart';
 import 'package:boilerplate/ui/home/list_petugas.dart';
 import 'package:boilerplate/ui/profile/profile_petugas.dart';
+import 'package:boilerplate/ui/profile/profile_petugas_main.dart';
 import 'package:boilerplate/ui/profile/profile_warga.dart';
 import 'package:boilerplate/ui/schedule/list_schedule.dart';
 import 'package:boilerplate/ui/schedule/tab_bar.dart';
@@ -37,7 +38,8 @@ void initState(){
     HomePetugasPage(),
     StackOver(),
     ActivityPage(),
-    ProfilePetugasPage(),
+    //ProfilePetugasPage(),
+    ProfilePetugasMain(),
   ];
 
   final _pageOptionsWarga = [

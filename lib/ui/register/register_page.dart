@@ -448,14 +448,21 @@ class _RegisterPageState extends State<RegisterPage> {
                             } else {
                               context
                                   .read<AuthService>()
-                                  .registerWarga(namaInstansi, penanggungJawab, email, password, alamat, telp, jarakPengambilan)
+                                  .registerWarga(
+                                      namaInstansi,
+                                      penanggungJawab,
+                                      email,
+                                      password,
+                                      alamat,
+                                      telp,
+                                      jarakPengambilan)
                                   .then((value) async {
                                 if (value == "Registration Successfully") {
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            LoginWargaPage()));
+                                  Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              LoginWargaPage()));
                                 }
                               });
                               // successful login notification
