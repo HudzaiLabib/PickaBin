@@ -184,6 +184,62 @@ class _ProfilePetugasMainState extends State<ProfilePetugasMain> {
                   Container(
                     height: 35.0,
                     child: ListTile(
+                      leading: Icon(
+                        Icons.star_rounded,
+                      ),
+                      trailing: Icon(Icons.arrow_forward_ios_outlined),
+                      title: const Text('Premium'),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProfilePetugasPage()));
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 70.0),
+                    child: Divider(thickness: 1, color: Colors.black),
+                  ),
+                  Container(
+                    height: 35.0,
+                    child: ListTile(
+                      leading: Icon(Icons.person_pin),
+                      trailing: Icon(Icons.arrow_forward_ios_outlined),
+                      title: const Text('Petugas favorit'),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProfilePetugasPage()));
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 70.0),
+                    child: Divider(thickness: 1, color: Colors.black),
+                  ),
+                  Container(
+                    height: 35.0,
+                    child: ListTile(
+                      leading: Icon(Icons.percent_rounded),
+                      trailing: Icon(Icons.arrow_forward_ios_outlined),
+                      title: const Text('Promo'),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProfilePetugasPage()));
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 70.0),
+                    child: Divider(thickness: 1, color: Colors.black),
+                  ),
+                  Container(
+                    height: 35.0,
+                    child: ListTile(
                       leading: Icon(Icons.report_rounded),
                       trailing: Icon(Icons.arrow_forward_ios_outlined),
                       title: const Text('Lapor'),
